@@ -9,6 +9,8 @@ from faker import Faker
 @pytest.fixture
 def browser():
     driver = webdriver.Chrome()
+    #driver = webdriver.Firefox()
+    #driver = webdriver.Edge()
     yield driver
     driver.quit()
 
@@ -19,8 +21,8 @@ last_name = fake.last_name()
 class TestForm:
     # On crée une fonction de test qui va mettre en erreur
     #def test_display_error(self):
-    #first_name = ''
-    #assert Form.display(first_name) != ''
+    #    first_name = ''
+    #    assert Form.display(first_name) != ''
 
     # On crée une fonction de test qui va vérifier que le prenom n'est pas vide
     def test_display_first_name(self):
